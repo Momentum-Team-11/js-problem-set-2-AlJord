@@ -6,17 +6,57 @@
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
 
+function remove (students, name) {
+    let newArray = []
+    
+    for (let student of students) {
+    if (student != name) {
+    newArray.push(student)
+    
+}  
+}
+return newArray
+}
+
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
 
+
+
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
+function sum (numbs) {
+let sum = 0
+for (let single of numbs) {
+    sum = sum + single 
+}
+
+return sum}
+
+
+
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
+function average (numbs) {
+let average = 0
+{
+    for (let single of numbs)
+return average = sum(numbs) / (numbs.length)
+}
+}
+
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+
+function minimum(numbers) {
+    let minimum = 0
+    for (let num of numbers) {
+    return minimum = Math.min(numbers)
+}
+
+}
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
@@ -42,8 +82,29 @@
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
+
+
+
+
+
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+
+function textList (arr) {
+let result = ''
+if (arr.length > 1){ 
+    for (let x of arr) {
+        result += x + ','
+    }
+    } else {
+    for (let x of arr) {
+        result += x 
+    }
+    console.log(result)
+    }
+return result }
+
+
