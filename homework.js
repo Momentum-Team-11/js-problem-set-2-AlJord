@@ -18,6 +18,7 @@ function remove (students, name) {
 return newArray
 }
 
+
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
 
@@ -83,7 +84,37 @@ function minimum(numbers) {
 // to see how. This may make more sense to you.
 
 
+function selectionSort (newArray) {
+    let sortedArray = []
+    let arrayCopy = [...array]
+    while(arrayCopy.length > 0) {
+        let minNum= minimum(arrayCopy)
+        sortedArray.push(minNum)
+    const indexOfMinNum = arrayCopy.indexOf(minNum)
+    arrayCopy.splice(indexOfMinNum, 1)
+}
+return sortedArray
+}
 
+
+
+
+
+
+
+
+// function selectionSort (unNumb) {
+//     for (let i = 0; i< unNumb.length -1 ; i++) {
+//         let minIndex = i;
+//         for (let j = i +1; j < unNumb.length; j++) {
+//             if (unNumb[j] < unNumb[minIndex]) {
+//         minIndex = j;        
+//     }
+// }
+// [unNumb[i], unNumb[minIndex]] = [unNumb[minIndex], unNumb[i]];
+// }
+// return unNumb;
+// }
 
 
 
@@ -93,18 +124,44 @@ function minimum(numbers) {
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
 
-function textList (arr) {
-let result = ''
-if (arr.length > 1){ 
-    for (let x of arr) {
-        result += x + ','
+
+function textList(newString){
+    if (newString.length < 1) {
+        newString.join(',')
     }
-    } else {
-    for (let x of arr) {
-        result += x 
-    }
-    console.log(result)
-    }
-return result }
+    return newString
+}
+
+
+
+
+// function textList(array) {
+//     if (array.length > 1) {
+//         array.join(',')
+//     }
+
+// return array
+
+// }
+
+
+
+
+
+
+
+// function textList (arr) {
+// let result = ''
+// if (arr.length > 1){ 
+//     for (let x of arr) {
+//         result += x + ','
+//     }
+//     } else {
+//     for (let x of arr) {
+//         result += x 
+//     }
+//     console.log(result)
+//     }
+// return result }
 
 
